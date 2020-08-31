@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      modatta
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="false">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-subtitle>Já concluiste todos os passos pedidos na oferta?</ion-card-subtitle>
+      <ion-card-title>Por favor faz scan ao QR code da oferta</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <ion-button *ngIf="code==undefined" (click)="scan()" >Ler QR code</ion-button>
+      <span *ngIf="code!=undefined">{{code}}</span>
+      <h5>As ofertas podem levar varios dias a ser validado. ...</h5>
+      <ion-button *ngIf="code!=undefined" (click)="confirm()">Confirmar</ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

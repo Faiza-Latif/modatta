@@ -1,0 +1,7 @@
+{
+  "name": "modatta",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
